@@ -16,12 +16,12 @@ namespace Dolgozok_OOP
         {
             //Halasi-Czalbert Tibor
 
-            Beolvasas("dolgozok.csv");
-            //Kiiratas();
-            //Torles(20);
-            //Kiiratas();
-            //Felvetel("Lajos","férfi",37,150000);
-            //Kiiratas();
+            Beolvasas("dolgozok.json");
+            Kiiratas();
+            Torles(20);
+            Kiiratas();
+            Felvetel("Lajos", "férfi", 37, 150000);
+            Kiiratas();
             FerfiDolgozokSzama();
             NoiDolgozokSzama();
             Console.WriteLine(LegnagyobbFizetes());
@@ -29,6 +29,7 @@ namespace Dolgozok_OOP
             FerfiAtlagFizetes();
             NoiAtlagFizetes();
             DolgozokAtlagFizetes();
+            //BeolvasasJSON();
 
             Console.ReadKey();
         }
@@ -51,6 +52,24 @@ namespace Dolgozok_OOP
             }
             sr.Close();
         }
+
+        //static void BeolvasasJSON()
+        //{
+        //    var incoming = new List<Dolgozo>();
+
+        //    using (StreamReader r = new StreamReader("dolgozok.json"))
+        //    {
+        //        string json = r.ReadToEnd();
+        //    }
+        //}
+
+        //public record struct Dolgozo(
+        //    int id,
+        //    string name,
+        //    string gender,
+        //    int age,
+        //    int salary
+        //);
 
         static void Kiiratas()
         {
