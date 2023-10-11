@@ -28,6 +28,7 @@ namespace Dolgozok_OOP
             Console.WriteLine(LegkisebbFizetes());
             FerfiAtlagFizetes();
             NoiAtlagFizetes();
+            DolgozokAtlagFizetes();
 
             Console.ReadKey();
         }
@@ -173,5 +174,16 @@ namespace Dolgozok_OOP
             }
             Console.WriteLine($"Átlag fizetés a nőknél:{noiOsszKereset / noiDolgozok.Count}");
         }
+
+        static void DolgozokAtlagFizetes()
+        {
+            int dolgozokOsszKereset = 0;
+            foreach (var item in dolgozok)
+            {
+                dolgozokOsszKereset += item.Salary;
+            }
+            Console.WriteLine($"Átlag fizetés a dolgozóknál:{dolgozokOsszKereset / dolgozok.Count}");
+        }
+        //Legfiatalabb, legöregebb, átlagos életkor teljesen ugyanaz az a maximum-minimum-átlag kiválasztás, mint a fizetésnél...
     }
 }
